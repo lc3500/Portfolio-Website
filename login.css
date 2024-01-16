@@ -21,7 +21,7 @@ html, body {
     align-items: center;
     backdrop-filter: blur(10px);
     z-index: -1;
-    background-image: url(layeredWaves.png);
+    background-image: url(/assets/layeredWaves.png);
     background-size: cover;
     background-position: bottom;
 
