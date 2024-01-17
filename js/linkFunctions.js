@@ -1,5 +1,5 @@
 function getLinks() {
-  $.getJSON('view_links.php', function(links) {
+  $.getJSON('./php/view_links.php', function(links) {
     // Add link divs to container
     console.log(links);
     $.each(links, function(index, link) {
@@ -23,7 +23,7 @@ function submitLink() {
   var linkCategory = $('#link-category').val();
   var linkUrl = $('#link-url').val();
 
-  $.post('insert_link.php', { 'project-name': projectName, 'link-category': linkCategory, 'link-url': linkUrl }, function(response) {
+  $.post('../php/insert_link.php', { 'project-name': projectName, 'link-category': linkCategory, 'link-url': linkUrl }, function(response) {
     console.log(response);
     getLinks();
   });
@@ -33,7 +33,7 @@ function submitLink() {
 
 function displayLinks() {
   // Fetch the links from the server
-  $.getJSON('view_links.php', function(links) {
+  $.getJSON('../php/view_links.php', function(links) {
     // Create a list to display the links
     var cList = $("#projListC");
     var pyList = $("#projListPy");
@@ -81,7 +81,7 @@ function deleteLink(linkId) {
   // Send a POST request to delete the link from the database
     
 if(confirm("Are you sure you want to delete this project?")) {
-  $.post('delete_link.php', {id: linkId}, function(result) {
+  $.post('../php/delete_link.php', {id: linkId}, function(result) {
     if (result.success) {
       // If the link was deleted successfully, remove it from the list
       $('#link-' + linkId).remove();

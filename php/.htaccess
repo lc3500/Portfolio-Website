@@ -1,0 +1,19 @@
+Options +FollowSymLinks 
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^lanecrowder\.com [NC]
+RewriteRule ^(.*)$ https://www.lanecrowder.com/$1 [L,R=301]
+
+RewriteCond %{QUERY_STRING} .
+RewriteRule ^ %{REQUEST_URI}? [L,R=301]
+
+RewriteRule ^login$ ./php/login.php [L]
+RewriteRule ^admin$ ./php/admin.php [L]
+
+ErrorDocument 404 ./html/404.html
+ErrorDocument 403 ./html/404.html
+
+RewriteRule ^404$ html/404.html [L]
+
+
+

@@ -47,13 +47,13 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Lane Crowder — Login</title>
 	<link rel="stylesheet" type="text/css" href="../login.css">
-    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="icon" href="../assets/icon.png" type="image/png">
 </head>
 <body>
    <div id="container">
    <h1 id="header"><span style="color: darkslategrey;">LANE</span><span style="color: darkorange;">CROWDER</span></h1>
     <div id="loginBox">
-	<form action="login.php" method="post" id="login">
+	<form action="./php/login.php" method="post" id="login">
     <div id="inputContainer">
       <input id="user" class="input" type="text" name="username" required>
       <label for="user" class="userLabel user">Username</label>

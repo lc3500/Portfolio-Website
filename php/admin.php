@@ -1,14 +1,14 @@
 <?php
-session_start();
-header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
-header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
+  session_start();
+  header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+  header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 
 
-// Check if user is not logged in, redirect to login page
-if (!isset($_SESSION['user_id']) || !isset($_SESSION['username'])) {
-  header("Location: login.php");
-  exit();
-}
+  // Check if user is not logged in, redirect to login page
+  //if (!isset($_SESSION['user_id']) || !isset($_SESSION['username'])) {
+   // header("Location: https://www.lanecrowder.com/login");
+  //  exit();
+ // } 
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['username'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lane Crowder – Admin</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
     <meta http-equiv="Expires" content="Sat, 26 Jul 1997 05:00:00 GMT">
      <link rel="icon" href="icon.png" type="image/png">
@@ -27,7 +27,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['username'])) {
     <div id="profileMain">
       <div id="backdrop"></div>
        <div style="display: flex;">
-           <a href="https://www.lanecrowder.com" style="text-decoration: none; color: black"><div  id="backLinkProfile" style=""><h1 style="margin: 0;">&#8635 back</h1></div></a>
+           <!-- <a href="https://www.lanecrowder.com" style="text-decoration: none; color: black"><div  id="backLinkProfile" style=""><h1 style="margin: 0;">&#8635 back</h1></div></a> -->
            <div id="profileHeader">
             <h1 style="font-size: 40px; margin-top: 10px; display: inline-block;">Welcome, <h1 style="font-size: 40px; display: inline-block; color: orange;">&nbsp Lane <h1 style="display: inline-block; font-size: 40px;">!</h1></h1></h1>
            </div>
@@ -99,8 +99,8 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['username'])) {
 
  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-   <script src="admin.js" ></script>
-   <script src="linkFunctions.js"></script>
+   <script src="../js/admin.js" ></script>
+   <script src="../js/linkFunctions.js"></script>
    
   </body>
 </html>
