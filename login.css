@@ -45,6 +45,7 @@ html, body {
 #login {
     background-color: none;
     font-size: 20px;
+    width: 100%;
     font-family: 'Sofia Sans Extra Condensed', sans-serif;
 }
 
@@ -52,8 +53,76 @@ html, body {
     margin: 10px;
 }
 
+#inputContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+}
+
 .input {
+    position: relative;
+    z-index: 1;
     height: 30px;
+    padding: 10px;
+    font-size: 15px;
+    border: 0;
+    background-color: transparent;
+    border-bottom-style: solid !important;
+    border-bottom-width: 2px !important;
+    border-bottom-color: rgb(0, 0, 0) !important;
+    transition: all 0.8s ease;
+}
+
+.input:focus {
+    border-bottom-color: rgb(136, 185, 163)!important;
+    transition: all 0.8s ease;
+}
+
+.input:focus, .input textarea {
+    outline: none !important;
+}
+
+/* 
+.input:focus::placeholder {
+  transform: translateY(-20px) scale(0.9); 
+  transition: transform 0.3s ease; 
+}
+
+.input::placeholder {
+    transform: translateY(0);
+    transform-origin: left;
+    transition: all 0.3s ease;
+} */
+
+.user {
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: -6rem;
+    color: grey;
+    transition: all 0.3s cubic-bezier(.74,.01,.24,1.02);
+
+}
+
+.pass {
+    position: absolute;
+    margin-top: 6rem;
+    margin-left: -6rem;
+    color: grey;
+    transition: all 0.3s cubic-bezier(.74,.01,.24,1.02);
+}
+
+.input:focus + .user, .input:valid + .user{
+    margin-top: -1rem;
+    transition: all 0.3s cubic-bezier(.74,.01,.24,1.02);
+    color: rgb(241	145	54);
+}
+
+.input:focus + .pass, .input:valid + .pass {
+    margin-top: 4rem;
+    transition: all 0.3s cubic-bezier(.74,.01,.24,1.02);
+    color: rgb(241	145	54);
 }
 
 #buttonContainer {
@@ -69,4 +138,8 @@ html, body {
     border-width: thick;
     font-family: 'Sofia Sans Extra Condensed', sans-serif;
     
+}
+
+#user {
+    background-color: transparent;
 }
