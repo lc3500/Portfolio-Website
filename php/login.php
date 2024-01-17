@@ -2,7 +2,7 @@
 session_start();
 
 // Connect to the database
-/*$db = new mysqli('sql211.epizy.com', 'epiz_33580332', '6Us8jELiV1tpYL', 'epiz_33580332_logins');
+$db = new mysqli('sql211.epizy.com', 'epiz_33580332', '6Us8jELiV1tpYL', 'epiz_33580332_logins');
 
 // Check if the login form was submitted
 if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -36,7 +36,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   } else {
     $error = "Invalid username";
   }
-}*/
+}
 
 // Display the login form with an error message (if any)
 ?>--->
